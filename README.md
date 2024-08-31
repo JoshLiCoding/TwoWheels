@@ -25,7 +25,7 @@ Faster R-CNN is a two-stage object detection model that is built on top of Fast 
 
 To adapt this model for cyclist detection (and pedestrian / other), I fine-tuned the model on 100 new images (with a batch size of 5) for 10 epochs. It's interesting to note here that backpropagation is dependent of 4 loss gradients: 2 for RPN and 2 for ROI. Here is what the training curve looked like after adding all 4 losses together:
 
-![Faster R-CNN Curve](./readme-images/faster-rcnn-curve.png)
+<img src="./readme-images/faster-rcnn-curve.png" width=400>
 
 To evaluate the model's performance, we can use a metric called Mean Average Precision (mAP). For simplicity, let's just visualize the classes and bounding boxes that the model outputs. Below is a gif of its predictions on images that were used during training:
 
@@ -35,6 +35,6 @@ And its predictions on images that were not used during training:
 
 ![Faster R-CNN Gif 2](./readme-images/faster-rcnn-2.gif)
 
-![Faster R-CNN Gif 2](./readme-images/faster-rcnn-3.gif)
+![Faster R-CNN Gif 3](./readme-images/faster-rcnn-3.gif)
 
 While not perfect, the model seems to perform relatively well on both in-sample and out-of-sample data. In particular, its bounding boxes are able to pick up on small objects accurately, but the model has trouble differentiating between incoming cyclists and pedestrians.
