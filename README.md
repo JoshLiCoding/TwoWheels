@@ -27,7 +27,7 @@ To adapt this model for cyclist detection (and pedestrian / other), I fine-tuned
 
 <img src="./readme-images/faster-rcnn-curve.png" width=400>
 
-To evaluate the model's performance, we can use a metric called Mean Average Precision (mAP). For simplicity, let's just visualize the classes and bounding boxes that the model outputs. Below is a gif of its predictions on images that were used during training:
+To evaluate the model's performance, we can use a metric called Mean Average Precision (mAP). However, to keep things simple, let's just visualize the classes and bounding boxes that the model outputs. Below is a gif of its predictions on images that were used during training:
 
 ![Faster R-CNN Gif 1](./readme-images/faster-rcnn-1.gif)
 
