@@ -23,7 +23,7 @@ Faster R-CNN is a two-stage object detection model that is built on top of Fast 
 3. Region Proposal Network (RPN), upon which Regions of Interest (ROIs) are generated based on objectness and anchor-based bounding boxes
 4. ROI heads, where ROIs are pooled and fed into FC layers for class and bounding box predictions
 
-To adapt this model for cyclist detection (and pedestrian / other), I fine-tuned the model on 100 new images (with a batch size of 5) for 10 epochs. It's interesting to note here that backpropagation is dependent of 4 loss gradients: 2 for RPN and 2 for ROI. Here is what the training curve looked like after adding all 4 losses together:
+To adapt this model for cyclist detection (and pedestrian / other), I fine-tuned the model on 100 new images (with a batch size of 5) for 10 epochs. It's interesting to note here that backpropagation is dependent on 4 loss gradients: 2 for RPN and 2 for ROI. Here is what the training curve looks like after adding all 4 losses together:
 
 <img src="./readme-images/faster-rcnn-curve.png" width=400>
 
