@@ -1,6 +1,6 @@
 # TwoWheels
 
-TwoWheels is a video-based object detection project, primarily for identifying cyclists. I aim to fine-tune two well-known architectures - Faster R-CNN and SSD - and compare their results visually.
+TwoWheels is a video-based object detection project, primarily for identifying cyclists. I aim to fine-tune two architectures - Faster R-CNN and SSD - and compare their results visually.
 
 ## Data
 
