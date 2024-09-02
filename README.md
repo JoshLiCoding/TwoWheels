@@ -75,7 +75,7 @@ The calculated mAP:
 
 <img src="./readme-images/ssd-mAP.png" width=400>
 
-Finally, predictions on the same set of images visualized for Faster R-CNN (although these are all in-sample data for SSD):
+As well as predictions on the same set of images visualized for Faster R-CNN (although these are all in-sample data for SSD):
 
 ![SSD Gif 1](./readme-images/ssd-1.gif)
 
