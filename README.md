@@ -10,7 +10,7 @@ TwoWheels is a video-based object detection project for identifying cyclists and
 | SSD          | Fast                 | 3.92   |
 | YOLOv8       | Fast                 | 90.33  |
 
-We can observe that the SSD model performs very poorly (primarily due to low input resolution) compared to the more robust Faster R-CNN. That said, the state-of-the-art YOLOv8 model predictably takes the crown.
+We can observe that the SSD model performs very poorly (primarily due to low input resolution) compared to the more robust Faster R-CNN. That said, the state-of-the-art YOLOv8 model takes the crown as expected.
 
 ## Data
 
