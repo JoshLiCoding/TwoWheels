@@ -1,6 +1,6 @@
 # TwoWheels
 
-_OpenCV, PyTorch_
+_OpenCV, PyTorch, YOLO_
 
 TwoWheels is a video-based object detection project for identifying cyclists and pedestrians. I fine-tuned architectures Faster R-CNN, SSD and YOLOv8, whose predictions are evaluated on a set of 30 images:
 
