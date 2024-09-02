@@ -1,5 +1,7 @@
 # TwoWheels
 
+_OpenCV, PyTorch_
+
 TwoWheels is a video-based object detection project for identifying cyclists and pedestrians. I fine-tuned architectures Faster R-CNN and SSD, whose predictions are evaluated on a set of 30 images:
 
 |              | Train / Test Time | mAP@.5 |
