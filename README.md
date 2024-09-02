@@ -1,13 +1,13 @@
 # TwoWheels
 
-TwoWheels is a video-based object detection project for identifying cyclists and pedestrians. I fine-tuned architectures Faster R-CNN and SSD, and tested their predictions on a set of 30 images:
+TwoWheels is a video-based object detection project for identifying cyclists and pedestrians. I fine-tuned architectures Faster R-CNN and SSD, whose predictions on a set of 30 images:
 
 |              | Train / Test Time | mAP@.5 |
 | ------------ | ----------------- | ------ |
 | Faster R-CNN | Slow              | 67.82  |
 | SSD          | Fast              | 3.92   |
 
-We can see that the SSD model performs very poorly (primarily due to an initial image resize to 300x300) whereas Faster R-CNN is observed to be more robust. However, since there are many architectural differences in the PyTorch models, the result should be not treated as a fair comparison. See a more detailed discussion below.
+We can observe that the SSD model performs very poorly (primarily due to an initial image resize to 300x300) whereas Faster R-CNN is observed to be more robust. However, since there are many architectural differences in the PyTorch models, the result should be taken with a grain of salt. See a more detailed discussion below.
 
 ## Data
 
