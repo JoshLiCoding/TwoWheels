@@ -8,7 +8,7 @@ TwoWheels is a video-based object detection project for identifying cyclists and
 | ------------ | -------------------- | ------ |
 | Faster R-CNN | Slow                 | 67.82  |
 | SSD          | Fast                 | 3.92   |
-| YOLOv8       | Fast                 | 90.33  |
+| YOLOv8       | Very Fast            | 90.33  |
 
 We can observe that the SSD model performs very poorly (primarily due to low input resolution) compared to the more robust Faster R-CNN. That said, the state-of-the-art YOLOv8 model takes the crown as expected.
 
@@ -106,7 +106,7 @@ We can take a look at the mAP:
 
 <img src="./readme-images/yolo-mAP.png" width=400>
 
-And of course, we can visualize predictions on the same set of images using YOLO's built-in method (these are all in-sample data for YOLO as well):
+And of course, we can visualize predictions on the same set of images as above (these are all in-sample data for YOLO as well):
 
 ![YOLO Gif 1](./readme-images/yolo-1.gif)
 
@@ -114,7 +114,7 @@ And of course, we can visualize predictions on the same set of images using YOLO
 
 ![YOLO Gif 3](./readme-images/yolo-2.gif)
 
-We can see that not only is YOLO extremely fast, it also does an excellent job at identifying and classifying almost every object. It's interesting to note here that on a separate set of validation data (images 600-650, not shown above), the model has a hard time predicting an elderly person with a child as pedestrians - so perhaps more training is needed.
+We can see that not only is YOLO extremely fast, it also does an excellent job at identifying and classifying almost every object. This is due to it's large input resolution size, higher number of training epochs and better quality of underlying model. Though it's interesting to note that on a separate set of validation data (images 600-650, not shown above), the model has a hard time predicting an elderly person with a child as pedestrians - so perhaps more training is needed.
 
 ## Credits
 
