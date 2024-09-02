@@ -100,7 +100,7 @@ _Credit: You Only Look Once: Unified, Real-Time Object Detection paper ([link](h
 
 Like SSD, YOLO is a one-stage object detection model. The original YOLO divides an input image into a SxS grid upon which each cell predicts 1 class and B bounding boxes (which are possibly larger than the grid cell).
 
-Many iterations have come after the original paper, and YOLOv8 is one of the cutting-edge versions today. Thus, I used Ultralytic's built-in YOLOv8 training method to fine-tune the model on 300 images for 20 epochs. Note that images are resized to 1024x1024 before training.
+Many iterations have come after the original paper, and YOLOv8 is one of the cutting-edge versions today. I used Ultralytic's built-in YOLOv8 training method to fine-tune the model on 300 images for 20 epochs. Note that images are resized to 1024x1024 before training.
 
 We can take a look at the mAP:
 
