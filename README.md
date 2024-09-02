@@ -114,7 +114,9 @@ And of course, we can visualize predictions on the same set of images as above (
 
 ![YOLO Gif 3](./readme-images/yolo-3.gif)
 
-We can see that not only is YOLO extremely fast, it also does an excellent job at identifying and classifying almost every object. This is due to its large input resolution size, higher number of training epochs and better quality of underlying model. Though it's interesting to note that on a separate set of validation data (images 600-650, not shown above), the model has a hard time predicting an elderly person with a child as pedestrians - so perhaps more training is needed.
+We can see that not only is YOLO extremely fast, it also does an excellent job at identifying and classifying almost every object. This is due to its large input resolution size, higher number of training epochs and better quality of underlying model. Though it's interesting to note that on a separate set of validation data (images 600-650, some shown below), the model has a hard time predicting an elderly person with a child as pedestrians - so perhaps more training is needed.
+
+<img src="./readme-images/yolo-val-pred.jpg" width=800>
 
 ## Credits
 
