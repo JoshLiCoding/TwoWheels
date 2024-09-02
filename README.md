@@ -2,14 +2,15 @@
 
 _OpenCV, PyTorch_
 
-TwoWheels is a video-based object detection project for identifying cyclists and pedestrians. I fine-tuned architectures Faster R-CNN and SSD, whose predictions are evaluated on a set of 30 images:
+TwoWheels is a video-based object detection project for identifying cyclists and pedestrians. I fine-tuned architectures Faster R-CNN, SSD and YOLOv8, whose predictions are evaluated on a set of 30 images:
 
-|              | Train / Test Time | mAP@.5 |
-| ------------ | ----------------- | ------ |
-| Faster R-CNN | Slow              | 67.82  |
-| SSD          | Fast              | 3.92   |
+|              | Train / Predict Time | mAP@.5 |
+| ------------ | -------------------- | ------ |
+| Faster R-CNN | Slow                 | 67.82  |
+| SSD          | Fast                 | 3.92   |
+| YOLOv8       | Fast                 | 90.33  |
 
-We can observe that the SSD model performs very poorly (primarily due to an initial image resize to 300x300) whereas Faster R-CNN is observed to be more robust. However, since there are many architectural differences in the PyTorch models, the result should be taken with a grain of salt. See a more detailed discussion below.
+We can observe that the SSD model performs very poorly (primarily due to low input resolution) compared to the more robust Faster R-CNN. That said, the state-of-the-art YOLOv8 model predictably takes the crown.
 
 ## Data
 
@@ -32,7 +33,7 @@ Faster R-CNN is a two-stage object detection model that is built on top of Fast 
 3. Region Proposal Network (RPN), upon which Regions of Interest (ROIs) are generated based on objectness and anchor-based bounding boxes
 4. ROI heads, where ROIs are pooled and fed into FC layers for class and bounding box predictions
 
-To adapt this model for cyclist detection (and pedestrian / other), I fine-tuned the model on 100 new images (with a batch size of 5) for 10 epochs. It's interesting to note here that backpropagation is dependent on 4 loss gradients: 2 for RPN and 2 for ROI. Here is what the training curve looks like after adding all 4 losses together:
+To adapt this model for cyclist detection (and pedestrian / other), I fine-tuned the model on 100 new images (with a batch size of 5) for 10 epochs<sup>1</sup>. It's interesting to note here that backpropagation is dependent on 4 loss gradients: 2 for RPN and 2 for ROI. Here is what the training curve looks like after adding all 4 losses together:
 
 <img src="./readme-images/faster-rcnn-curve.png" width=400>
 
@@ -91,8 +92,36 @@ I believe that this poor performance may be due to:
 3. Classification issues when many objects on the same scale are close to each other
 4. Inherent trade-off between speed and accuracy in SSD architecture
 
+## YOLOv8
+
+<img src="./readme-images/yolo-arch.png" width=400>
+
+_Credit: You Only Look Once: Unified, Real-Time Object Detection paper ([link](https://arxiv.org/pdf/1506.02640))_
+
+Like SSD, YOLO is a one-stage object detection model. The original YOLO divides an input image into a SxS grid upon which each cell predicts 1 class and B bounding boxes (which are possibly larger than the grid cell).
+
+Many iterations have come after the original paper, and YOLOv8 is one of the cutting-edge versions today. Thus, I used Ultralytic's built-in YOLOv8 training method to fine-tune the model on 300 images for 20 epochs. Note that images are resized to 1024x1024 before training.
+
+We can take a look at the mAP:
+
+<img src="./readme-images/yolo-mAP.png" width=400>
+
+And of course, we can visualize predictions on the same set of images using YOLO's built-in method (these are all in-sample data for YOLO as well):
+
+![YOLO Gif 1](./readme-images/yolo-1.gif)
+
+![YOLO Gif 2](./readme-images/yolo-2.gif)
+
+![YOLO Gif 3](./readme-images/yolo-2.gif)
+
+We can see that not only is YOLO extremely fast, it also does an excellent job at identifying and classifying almost every object. It's interesting to note here that on a separate set of validation data (images 600-650, not shown above), the model has a hard time predicting an elderly person with a child as pedestrians - so perhaps more training is needed.
+
 ## Credits
 
 Thanks to João Cartucho for the mAP calculation script, which I've used with minor adjustments ([original code](https://github.com/Cartucho/mAP)).
 
 _Citation: J. Cartucho, R. Ventura and M. Veloso, "Robust Object Recognition Through Symbiotic Deep Learning In Mobile Robots," 2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Madrid, Spain, 2018, pp. 2336-2341, doi: 10.1109/IROS.2018.8594067_
+
+### Footnotes
+
+<sup>1</sup> All training is only done on positive samples of the number of images specified (i.e. images that contain ground-truth labels).
