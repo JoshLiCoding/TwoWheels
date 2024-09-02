@@ -124,4 +124,4 @@ _Citation: J. Cartucho, R. Ventura and M. Veloso, "Robust Object Recognition Thr
 
 ## Footnote
 
-<sup>1</sup> All training is only done on positive samples among the number of images specified (i.e. images that contain ground-truth labels).
+<sup>1</sup> All training is only done on positive samples among the number of images specified
