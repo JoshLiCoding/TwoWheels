@@ -2,3 +2,4 @@ dataset
 data-exploration/images
 faster-rcnn/rcnn.pt
 yolo/datasets
+yolo/detection-results
