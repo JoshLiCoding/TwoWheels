@@ -26,7 +26,7 @@ _Citation: X. Li, F. Flohr, Y. Yang, H. Xiong, M. Braun, S. Pan, K. Li and D. M.
 
 _Credit: Jonathan Hui on Medium ([link](https://jonathan-hui.medium.com/understanding-feature-pyramid-networks-for-object-detection-fpn-45b227b9106c))_
 
-Faster R-CNN is a two-stage object detection model that is built on top of Fast R-CNN and R-CNN (or Region-based CNN). Albeit slower than SSD, Faster R-CNN can be more accurate for identifying small objects (especially using FPN). The pretrained model that I've chosen to use is the **fasterrcnn_resnet50_fpn** from PyTorch with 4 components:
+Faster R-CNN is a two-stage object detection model that is built on top of Fast R-CNN and R-CNN (or Region-based CNN). Albeit slower than SSD and YOLO, Faster R-CNN can be more accurate for identifying small objects (especially using FPN). The pretrained model that I've chosen to use is the **fasterrcnn_resnet50_fpn** from PyTorch with 4 components:
 
 1. Image preprocessing (i.e. convert dimensions from 2048x1024 to 1333x667)
 2. ResNet50 backbone with a 4-layer Feature Pyramid Network (FPN)
