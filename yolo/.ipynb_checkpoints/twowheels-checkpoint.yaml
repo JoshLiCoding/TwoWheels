@@ -1,0 +1,7 @@
+train: "train/"
+val: "val/"
+test: "test/"
+names:
+  0: "pedestrian"
+  1: "cyclist"
+  2: "other"

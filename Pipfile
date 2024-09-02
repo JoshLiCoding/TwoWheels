@@ -12,6 +12,7 @@ jupyter = "*"
 tqdm = "*"
 numpy = "*"
 torchsummary = "*"
+ultralytics = "*"
 
 [dev-packages]
 
