@@ -1,0 +1,8 @@
+cyclist tensor(1727) tensor(602) tensor(1819) tensor(354)
+cyclist tensor(1909) tensor(573) tensor(2003) tensor(348)
+pedestrian tensor(977) tensor(573) tensor(1047) tensor(356)
+pedestrian tensor(1492) tensor(437) tensor(1513) tensor(379)
+pedestrian tensor(1558) tensor(451) tensor(1581) tensor(387)
+pedestrian tensor(1590) tensor(451) tensor(1614) tensor(388)
+pedestrian tensor(1625) tensor(435) tensor(1643) tensor(378)
+cyclist tensor(1705) tensor(417) tensor(1715) tensor(389)
