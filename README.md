@@ -122,6 +122,6 @@ Thanks to João Cartucho for the mAP calculation script, which I've used with mi
 
 _Citation: J. Cartucho, R. Ventura and M. Veloso, "Robust Object Recognition Through Symbiotic Deep Learning In Mobile Robots," 2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Madrid, Spain, 2018, pp. 2336-2341, doi: 10.1109/IROS.2018.8594067_
 
-### Footnotes
+## Footnote
 
 <sup>1</sup> All training is only done on positive samples among the number of images specified (i.e. images that contain ground-truth labels).
