@@ -13,7 +13,6 @@ tqdm = "*"
 numpy = "*"
 torchsummary = "*"
 ultralytics = "*"
-gradio = "*"
 
 [dev-packages]
 
