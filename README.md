@@ -2,6 +2,8 @@
 
 _OpenCV, PyTorch, YOLO_
 
+<img src="./readme-images/huggingface.svg" width=20> <a href="https://huggingface.co/spaces/joshlicoding/TwoWheels">Fine-Tuned YOLOv8 Demo</a>
+
 TwoWheels is a video-based object detection project for identifying cyclists and pedestrians. I fine-tuned architectures Faster R-CNN, SSD and YOLOv8, whose predictions are evaluated on a set of 30 images:
 
 |              | Train / Predict Time | mAP@.5 |
